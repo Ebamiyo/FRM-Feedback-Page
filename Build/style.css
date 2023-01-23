@@ -12,7 +12,7 @@ body {
     font-family: 'Overpass', sans-serif;
 }
 
-main {
+#main-div, #thankyou-div{
     width: 350px;
     padding: 1.5rem;
     margin-top: 15%;
@@ -20,9 +20,18 @@ main {
     border-radius: 1rem;
 }
 
+/* select a vote and thank you div is hidden when no action or vote is taken on the page*/
+#thankyou-div {
+    display: none;
+}
+#select-a-vote-div {
+    display: none;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    padding-top: 1rem;
+}
 #star, .votenumber{
-    background-color: rgb(38,47,56);
-    opacity: 3;
+    background-color: rgb(34, 49,62);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,20 +97,29 @@ h3 {
     font-weight: 700;
 }
 
-/* #submit-btn:focus {
+#submit-btn:focus {
     cursor: pointer;
     background-color: hsl(0, 0%, 100%);
     color: hsl(25, 97%, 53%);
     font-weight: 700;
-} */
+}
 
-.thankyoupage-main {
+#thankyoupage-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+#thankyoumessage {
+    color: hsl(25, 97%, 53%);
+    font-size: 14px;
+    padding: 0.5rem 0.7rem;
+    background-color:rgb(34, 49,62);
+    opacity: 2;
+    border-radius: 2rem;
+    margin-top: 1rem;
+}
 .thankyoupage-paragragh {
     color: hsl(216, 12%, 54%);
     padding-top: 0.5rem;

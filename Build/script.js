@@ -11,24 +11,21 @@ let voteIsClicked = false
 voteNumber.forEach(votenumber => {
     votenumber.addEventListener('click', function() {
         vote = votenumber.textContent
+        selectAVoteDiv.style.display = "none"
         voteIsClicked = true
-        console.log(vote);
     })
 })
 
 let baseString = ""
 submitBtn.addEventListener('click', function() {
     // show thankyou message when a vote is selected and submitted
-    if (voteIsClicked === true) {
+    if (voteIsClicked) {
         mainDiv.style.display = "none"
         thankYouDiv.style.display = "flex"
-        thankYouDiv.style.flexDirection = "column"
-        thankYouDiv.style.justifyContent = "center"
-        thankYouDiv.style.alignItems = "center"
         baseString = `You have selected ${vote} out of 5`
-        console.log(baseString);
         thankYouMessage.innerHTML = `<p>${baseString}</p>`
-        // show "select a vote" message when submission is made without voting
+    
+    // show "select a vote" message when submission is made without voting
     } else {
         selectAVoteDiv.style.display = "block"
     }
